@@ -1,0 +1,70 @@
+/* スティッキーヘッダー */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* レイアウト調整 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ロゴ */
+.logo a {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: color 0.3s;
+}
+
+.logo a:hover {
+  color: #1abc9c; /* ホバー時のアクセントカラー */
+}
+
+/* ナビゲーション */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* アイテム間のスペース */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+/* ホバーアニメーション */
+.nav-links a:hover {
+  color: #1abc9c; /* 明るいグリーンのアクセント */
+  border-bottom: 2px solid #1abc9c;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
